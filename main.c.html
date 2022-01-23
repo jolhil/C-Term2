@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>main.c</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bbb529;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #6897bb;}
+.s4 { color: #cc7832;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+main.c</font>
+</center></td></tr></table>
+<pre><span class="s0">#include </span><span class="s2">&lt;stdio.h&gt;</span>
+
+<span class="s0">#define </span><span class="s1">SIZE </span><span class="s3">5</span>
+
+<span class="s4">int </span><span class="s1">calculateAverage(</span><span class="s4">int </span><span class="s1">grades[]</span><span class="s4">, int </span><span class="s1">size[]) {</span>
+    <span class="s4">int </span><span class="s1">average</span><span class="s4">;</span>
+    <span class="s4">int </span><span class="s1">total = </span><span class="s3">0</span><span class="s4">;</span>
+    <span class="s4">for </span><span class="s1">(</span><span class="s4">int </span><span class="s1">i = </span><span class="s3">0</span><span class="s4">; </span><span class="s1">i &lt; size[</span><span class="s3">0</span><span class="s1">]</span><span class="s4">; </span><span class="s1">i++){</span>
+        <span class="s1">total = total + grades[i]</span><span class="s4">;</span>
+    <span class="s1">}</span>
+    <span class="s1">average = total / size[</span><span class="s3">0</span><span class="s1">]</span><span class="s4">;</span>
+    <span class="s4">return </span><span class="s1">average</span><span class="s4">;</span>
+<span class="s1">}</span>
+
+<span class="s4">void </span><span class="s1">printAverage(</span><span class="s4">int </span><span class="s1">grades[]) {</span>
+    <span class="s4">int </span><span class="s1">sizes[] = {SIZE}</span><span class="s4">;</span>
+    <span class="s4">int </span><span class="s1">average = calculateAverage(grades</span><span class="s4">, </span><span class="s1">sizes)</span><span class="s4">;</span>
+    <span class="s4">int </span><span class="s1">total = </span><span class="s3">0</span><span class="s4">;</span>
+    <span class="s4">for </span><span class="s1">(</span><span class="s4">int </span><span class="s1">i = </span><span class="s3">0</span><span class="s4">; </span><span class="s1">i &lt; SIZE</span><span class="s4">; </span><span class="s1">i++) {</span>
+        <span class="s1">printf(</span><span class="s2">&quot;Score %d is: %d</span><span class="s4">\n</span><span class="s2">&quot;</span><span class="s4">, </span><span class="s1">i + </span><span class="s3">1</span><span class="s4">, </span><span class="s1">grades[i])</span><span class="s4">;</span>
+        <span class="s1">total += grades[i]</span><span class="s4">;</span>
+    <span class="s1">}</span>
+    <span class="s1">printf(</span><span class="s2">&quot;Total score is: %d</span><span class="s4">\n</span><span class="s2">&quot;</span><span class="s4">, </span><span class="s1">total)</span><span class="s4">;</span>
+    <span class="s1">printf(</span><span class="s2">&quot;Average is: %d</span><span class="s4">\n</span><span class="s2">&quot;</span><span class="s4">, </span><span class="s1">average)</span><span class="s4">;</span>
+<span class="s1">}</span>
+
+<span class="s4">int </span><span class="s1">main() {</span>
+    <span class="s4">int </span><span class="s1">grades[SIZE] = {</span><span class="s3">77</span><span class="s4">, </span><span class="s3">83</span><span class="s4">, </span><span class="s3">90</span><span class="s4">, </span><span class="s3">100</span><span class="s4">, </span><span class="s3">61</span><span class="s1">}</span><span class="s4">;</span>
+    <span class="s1">printAverage(grades)</span><span class="s4">;</span>
+    <span class="s4">return </span><span class="s3">0</span><span class="s4">;</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
